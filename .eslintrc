@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+  },
+  "rules": {
+      "new-cap": [
+          2,
+          {
+          "capIsNewExceptions": [
+              "Map",
+              "List"
+          ]
+          }
+      ],
+    },
+}

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: custom;
+    src: url('./MAX.ttf');
+}
+
+body {
+  background-color: #F8F8F8;
+}
