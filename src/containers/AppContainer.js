@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
-import { startGame, endGame } from '../actions/appActions';
+import { startGame, stopGame } from '../actions/appActions';
 import App from '../components/App.js';
 
 const mapStateToProps = (state) => ({
   gameOn: state.app.get('gameOn'),
+  score: state.app.get('score'),
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  rotateImages: () => {
+  startGame: () => {
     dispatch(startGame());
   },
-  endGame: () => {
-    dispatch(endGame());
+  stopGame: () => {
+    dispatch(stopGame());
   },
 });
 
