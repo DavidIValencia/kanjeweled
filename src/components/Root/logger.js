@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+// this middleware logs all actions to the console
 export default function logger({ getState }) {
   return (next) => (action) => {
     console.log('will dispatch', action);

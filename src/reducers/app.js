@@ -10,7 +10,9 @@ const app = (state = initialState, action) => {
     case 'START_GAME':
       return state.set('gameOn', true);
     case 'STOP_GAME':
-      return state.set('gameOn', false);
+      return state.set('gameOn', false).set('score', 0);
+    case 'INCREASE_SCORE':
+      return state.set('score', state.get('score') + 100);
     default:
       return state;
   }
