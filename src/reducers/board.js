@@ -12,6 +12,8 @@ const board = (state = initialState, action) => {
       return state.set('game', action.game);
     case 'STOP_GAME':
       return state.set('freeze', action.freeze);
+    case 'ACTIVATE_TILE':
+      return state.set('game', action.game);
     default:
       return state;
   }

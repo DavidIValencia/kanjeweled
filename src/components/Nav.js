@@ -19,11 +19,12 @@ const styles = {
     alignItems: 'center',
     justfyContent: 'center',
     marginTop: '5em',
-    border: '0.15em solid #221300',
+    border: '0.15em solid black',
     borderRadius: '0.5em',
   },
   innerButton: {
     fontFamily: 'custom',
+    fontSize: '2.5em',
     display: 'flex',
     flex: 1,
     height: '100%',
@@ -32,6 +33,8 @@ const styles = {
     justifyContent: 'center',
   },
   score: {
+    fontFamily: 'custom',
+    fontSize: '5em',
     display: 'flex',
     height: '100%',
     width: '100%',
@@ -72,7 +75,7 @@ const Nav = ({ startGame, stopGame, gameOn, score }) => {
         </div>
       </div>
       <div style={styles.score} >
-        {`Score: ${score}`}
+        {`score: ${score}`}
       </div>
     </div>
   );

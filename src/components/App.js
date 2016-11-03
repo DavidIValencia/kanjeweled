@@ -5,17 +5,43 @@ import BoardContainer from '../containers/BoardContainer';
 const styles = {
   app: {
     display: 'flex',
+    flex: 10,
+    height: '100%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'column',
     height: '99.9vh',
     width: '99.9vw',
     justifyContent: 'center',
     alignItems: 'center',
   },
+  title: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '5em',
+    fontFamily: 'custom',
+    paddingTop: '0.25em',
+    paddingBottom: '0.25em',
+    width: '100%',
+    borderBottom: '2px solid black',
+  },
 };
 
 const App = ({ startGame, stopGame, gameOn, score }) => (
-  <div style={styles.app}>
-    <Nav score={score} gameOn={gameOn} startGame={startGame} stopGame={stopGame} />
-    <BoardContainer gameOn={gameOn} />
+  <div style={styles.wrapper} >
+    <div style={styles.title} >
+      <div>kanjEweled</div>
+    </div>
+    <div style={styles.app}>
+      <Nav score={score} gameOn={gameOn} startGame={startGame} stopGame={stopGame} />
+      <BoardContainer gameOn={gameOn} />
+    </div>
   </div>
 );
 App.propTypes = {

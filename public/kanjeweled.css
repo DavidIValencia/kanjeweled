@@ -1,6 +1,6 @@
 @font-face {
-  font-family: max;
-  src: url('./MAX.ttf');
+    font-family: custom;
+    src: url('./MAX.ttf');
 }
 
 body {
