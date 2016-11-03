@@ -21,7 +21,7 @@ const styles = {
   },
 };
 
-const Board = ({ gameOn, game }) => {
+const Board = ({ gameOn, game, activateTile, swapTile }) => {
   if (!gameOn) {
     return (
       <div style={styles.board}>
@@ -31,12 +31,18 @@ const Board = ({ gameOn, game }) => {
   }
   return (
     <div style={styles.board}>
-      <Tiles game={game} />
+      <Tiles
+        activateTile={activateTile}
+        swapTile={swapTile}
+        game={game}
+      />
     </div>
   );
 };
 Board.propTypes = {
   gameOn: PropTypes.bool,
   game: PropTypes.array,
+  swapTile: PropTypes.func,
+  activateTile: PropTypes.func,
 };
 export default Board;

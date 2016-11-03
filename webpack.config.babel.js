@@ -27,6 +27,10 @@ export default {
         test: /\.json$/,
         loader: 'json',
       },
+      {
+        test: /\.ttf/,
+        loader: 'url-loader?limit=100000&mimetype=application/font-ttf',
+      },
     ],
   },
 };
