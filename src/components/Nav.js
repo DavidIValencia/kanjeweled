@@ -32,10 +32,11 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textDecoration: 'none',
+    color: 'black',
   },
   score: {
     fontFamily: 'custom',
-    fontSize: '5em',
+    fontSize: '4em',
     display: 'flex',
     height: '100%',
     width: '100%',
