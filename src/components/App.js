@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Nav from './Nav';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BoardContainer from '../containers/BoardContainer';
 
 const styles = {
@@ -34,15 +35,23 @@ const styles = {
 };
 
 const App = ({ startGame, stopGame, gameOn, score }) => (
-  <div style={styles.wrapper} >
-    <div style={styles.title} >
-      <div>kanjEweled</div>
+  <ReactCSSTransitionGroup
+    transitionName="example"
+    transitionAppear={true}
+    transitionAppearTimeout={500}
+    transitionEnterTimeout={500}
+    transitionLeaveTimeout={500}
+  >
+    <div style={styles.wrapper} >
+      <div style={styles.title} >
+        <div>kanjEweled</div>
+      </div>
+      <div style={styles.app}>
+        <Nav score={score} gameOn={gameOn} startGame={startGame} stopGame={stopGame} />
+        <BoardContainer gameOn={gameOn} />
+      </div>
     </div>
-    <div style={styles.app}>
-      <Nav score={score} gameOn={gameOn} startGame={startGame} stopGame={stopGame} />
-      <BoardContainer gameOn={gameOn} />
-    </div>
-  </div>
+  </ReactCSSTransitionGroup>
 );
 App.propTypes = {
   startGame: PropTypes.func,

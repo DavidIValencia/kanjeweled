@@ -31,6 +31,7 @@ const styles = {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    textDecoration: 'none',
   },
   score: {
     fontFamily: 'custom',
@@ -54,9 +55,9 @@ const Nav = ({ startGame, stopGame, gameOn, score }) => {
             startGame();
           }}
         >
-          <div style={styles.innerButton} >
+          <a href="" style={styles.innerButton} >
             start
-          </div>
+          </a>
         </div>
       </div>
     );
@@ -70,9 +71,9 @@ const Nav = ({ startGame, stopGame, gameOn, score }) => {
           startGame();
         }}
       >
-        <div style={styles.innerButton} >
+        <a href="#" style={styles.innerButton} >
           restart
-        </div>
+        </a>
       </div>
       <div style={styles.score} >
         {`score: ${score}`}
