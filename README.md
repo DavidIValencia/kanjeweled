@@ -11,15 +11,15 @@ When tasked with building a copy of bejeweled, my first thought was to apply the
 
 To get started, clone this repository.  Then, install with NPM:
 
-```code
+```
 npm install
-``` code
+```
 
 and then start the app to server localhost:3050
 
-``` code
+```
 npm start
-``` code
+```
 
 #Playing Kanjeweled
 
